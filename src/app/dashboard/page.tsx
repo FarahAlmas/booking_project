@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Bell, Calendar, Clock, Filter } from "lucide-react"
+import { LayoutDashboard , Calendar, Clock, Filter } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -79,7 +79,7 @@ export default function DashboardPage() {
           <h1 className="text-2xl font-semibold">Dashboard</h1>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <Bell className="h-4 w-4" />
+              < LayoutDashboard className="h-4 w-4" />
               <span>{unreadNotifications} notifications</span>
             </div>
             <div className="flex items-center gap-2">
@@ -94,7 +94,7 @@ export default function DashboardPage() {
           className="relative rounded-full bg-gray-100 hover:bg-gray-200"
           onClick={handleBellClick}
         >
-          <Bell className="h-5 w-5" />
+          < LayoutDashboard className="h-5 w-5" />
           {unreadNotifications > 0 && (
             <Badge
               variant="destructive"
@@ -347,7 +347,7 @@ export default function DashboardPage() {
                       {"You have " + todayBookings + " bookings scheduled for today"}
                     </p>
                   </div>
-                  <ScrollArea className="h-[350px] px-6">
+                  <ScrollArea className="h-[800px] px-6">
                     <div className="space-y-2 pb-4">
                       {APPOINTMENT_DATA.map((appointment) => {
                         return (
